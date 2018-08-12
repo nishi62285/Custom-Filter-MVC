@@ -1,0 +1,33 @@
+﻿@model  System.Web.Mvc.HandleErrorInfo
+
+<div>
+    <h4 class="pageHdrSub">Please click <a href="@Url.Action("Index","Home")" style="color:#007AC9"><u>here</u></a> to go to the home page.</h4>
+</div>
+@{
+
+        <hr />
+        <h5> <b>Exception Details</b></h5>
+        <hr />
+        <h6><b> Controller :</b> @Model.ControllerName</h6>
+        <h6> <b>Action :</b> @Model.ActionName</h6>
+
+        <h6><b>Stack Trace</b></h6>
+        <pre style="width:95%;overflow:auto">
+        <code>  
+                      
+        <span style="color:red; margin-left:-150px">@Model.Exception.Message </span>
+                        @Model.Exception.StackTrace
+                       
+                           
+                   
+        </code>
+    </pre>
+    
+
+
+    <br />
+
+
+
+}
+
